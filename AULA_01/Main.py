@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 1. Criação do Dataset Fictício (Simulando o CSV)
+# 1. Criação do Dataset Fictício
 data = {
     'id_transacao': [101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
     'valor': [150, 450, 200, 800, 350, 120, 950, 600, 280, 720],
