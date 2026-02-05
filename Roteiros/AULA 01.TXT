@@ -8,3 +8,16 @@ junho - prova semestral prática(11/06) - prova sub(18/06) - prova exame(25/06)
 
 
 ROTEIRO AULA 01
+
+1 - Apresentar o professor
+
+2 - Apresentar o MAPA MENTAL, Calendário de feriados e Calendário de atividades ML-CHATBOT
+
+3 - Ferramentas de uso: Linguagem de programação: Python 10+ - Ambiente e código: VS-CODE ou similar - Repositório e versionamento: GITHUB
+
+4 - Explicação detalhada da 1ª Sprint e DOD dela (Aula-01: 0,15 ponto - Aula-02: 0,15 ponto - Aula-03: 0,20 ponto)
+
+5 - Atividade oficial da 1ª Sprint (0,15 ponto): Criação e preparação do ambiente no Github e primeiros testes de validação das ferramenta. Criação dos Project no GITHUB para evolução das Sprints ao longo do semestre. Colocar a Sprint 1 de fevereiro em execução.
+Enviar email ao professor com o nome dos integrantes do grupo e link do repositório (NOTA: inserir o professor como colaborador nos repositório e no project)
+
+6 - Living Coding para demonstração
