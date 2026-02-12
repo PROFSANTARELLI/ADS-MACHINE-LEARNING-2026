@@ -10,5 +10,6 @@ Maio - 3 aulas (Atividade AC-4(1 ponto) - Projeto prático oficial) + SEMANA TEC
 
 junho - prova semestral prática(11/06) - prova sub(18/06) - prova exame(25/06)
 
-ATIVIDADES COMPLEMENTARES: 
+ATIVIDADES COMPLEMENTARES:
+
 SPRINT 1: Aula-01: 0,15 ponto - Aula-02: 0,15 ponto - Aula-03: 0,20 ponto
