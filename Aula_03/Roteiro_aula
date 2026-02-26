@@ -1,1 +1,72 @@
+ROTEIRO FINAL DA AULA 03 - ENTREGA FINAL DA SPRINT 3
 
+PREPARAÇÃO:
+- Baixe todos os arquivos da pasta AULA_03 do repositório GITHUB do professor:
+link: https://github.com/PROFSANTARELLI/ADS-MACHINE-LEARNING-2026
+
+- Suba para o repositório oficial do Grupo.
+- Realize as atividades abaixo
+- Não esqueça que a entrega final oficial da SPRINT 1 precisa que cada aluno acesse a atvidade no AVA BRIGTHSPACE e siga as orientações de lá
+
+
+ATIVIDADE 1  - AULA 03
+
+1 - GERAR DATASET COM DADOS SINTÉTICOS
+- Use o IDE VSCODE ou o CODESPACE no próprio Github
+Abra o terminal e ative seu ambiente virtual (venv).
+
+- Execute o script de geração de dados sintáticos: Gerador_01.py
+python (ou python3) Gerador_01.py
+
+- Instale as dependências: pip install pandas scikit-learn matplotlib
+
+- Execute o algoritmo machine learning da atividade 1: python (ou python3) Atividade_01.py
+
+- Colete o resultado gerado e adicione na ISSUE SPRINT-1 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+Atividade 1 cumprida com SUCESSO!
+
+
+
+ATIVIDADE 2 - AULA 03 - Data Cleaning
+A importância da Limpeza (Data Cleaning)
+- Dados do mundo real são "sujos": possuem símbolos, variações de maiúsculas/minúsculas e informações irrelevantes.
+- Normalização: Converter tudo para minúsculas para que "ERRO" e "erro" sejam lidos como a mesma coisa.
+- Flags Binárias: Criar colunas de 0 ou 1 para a presença de palavras-chave (ex: "atraso", "estorno").
+
+Ação: Aprender a usar o Pandas para transformar frases em colunas numéricas (vetorização manual básica)
+- Salve e execute este script para criar o novo arquivo mensagens_suporte.csv
+python (ou python3) Gerador_02.py
+
+- Execute o algoritmo machine learning da atividade 2: python (ou python3) Atividade_02.py
+
+- Colete o resultado gerado e adicione na ISSUE SPRINT-1 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+Atividade 2 cumprida com SUCESSO!
+
+
+ATIVIDADE 3 - AULA 03 - Árvore de Decisão (Classificação de Prioridade)
+Cenário: O SAC da empresa está sobrecarregado. Precisamos de um modelo que decida se um ticket deve ir para a fila "Alta Prioridade" ou "Fila Comum".
+Objetivo Prático: Treinar o modelo para entender que mensagens com muitas exclamações e palavras de alerta são críticas. A árvore busca o Ganho de Informação. Ela escolhe a variável que melhor "separa" os dados em grupos puros.
+
+- Execute o algoritmo machine learning da atividade 3: python (ou python3) Atividade_03.py
+
+- Colete o resultado gerado e adicione na ISSUE SPRINT-1 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+Atividade 3 cumprida com SUCESSO!
+
+ATIVIDADE 4 - AULA 03 - Regressão Linear (Estimativa de Tempo de Resposta)
+Cenário: O cliente quer saber: "Em quanto tempo serei atendido?". A Regressão não dirá "Sim ou Não", mas sim um número contínuo (minutos).
+Objetivo Prático: Prever o tempo de espera baseado na complexidade da mensagem (tamanho do texto).
+
+- Execute o algoritmo machine learning da atividade 4: python (ou python3) Atividade_04.py
+
+- Colete o resultado gerado e adicione na ISSUE SPRINT-1 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+Atividade 4 cumprida com SUCESSO!
+
+Agora que vocês subiram os arquivos na ISSUE SPRNT-01, coloque ela na coluna de VALIDAÇÃO
+
+Como missão final, cada aluno deve abrir no AVA a atividade AC-1 e seguir as orientações lá de forma individual.
+
+BOA ATIVIDADE A TODOS!
