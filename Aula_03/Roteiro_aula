@@ -20,7 +20,7 @@ python (ou python3) Gerador_01.py
 
 - Instale as dependências: pip install pandas scikit-learn matplotlib
 
-- Execute o algoritmo machine learning da atividade 1: python (ou python3) Atividade_01.py
+- Execute o algoritmo machine learning da atividade 1: python (ou python3) Aula03_01.py
 
 - Colete o resultado gerado e adicione na ISSUE SPRINT-1 (pode ser Copia e Cola ou print do resultado na linha de comando)
 
