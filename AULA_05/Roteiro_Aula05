@@ -1,0 +1,88 @@
+CALENDÁRIO DE MARÇO:
+- 05/03/2026: SPRINT-02 (AC-2) - 1ª ETAPA - VALOR 0,25 ponto (CONCLUÍDO)
+- 12/03/2026: SPRINT-02 (AC-2) - 2ª ETAPA - VALOR 0,25 ponto
+- 19/03/2026: SPRINT-02 (AC-2) - ÚLTIMA ETAPA - VALOR 0,5 ponto
+- 26/03/2026: PROVA INDIVIDUAL (AAI) - VALOR 0,5 ponto
+
+
+
+2ª ETAPA da SPRINT-02 (AC-2) - Valor da atividade de hoje: 0,25 pts
+
+PREPARAÇÃO:
+- Baixe todos os arquivos da pasta AULA_04 do repositório GITHUB do professor:
+
+link: https://github.com/PROFSANTARELLI/ADS-MACHINE-LEARNING-2026
+
+- Suba todos os arquivos da aula 05 para o repositório oficial do Grupo.
+- Realize as atividades abaixo:
+
+ATENÇÃO: Para as atividades 1 e 2 usar o gerador: Gerador_Métricas_ML.py
+
+python Gerador_Métricas_ML.py
+
+
+
+ATIVIDADE 1 - Avaliando resultado por MAE (Erro Médio Absoluto)
+Cenário:Criando dados simulados de um Chatbot: Custo Real vs Custo Previsto pelo modelo
+
+- Execute o algoritmo machine learning da atividade 3: python exercicio_03_mae.py
+
+- Expplique o que ocorreu neste resultado
+
+- Colete o resultado gerado e adicione na SPRINT-2 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+Atividade 3 cumprida com SUCESSO!
+
+
+
+
+
+
+ATIVIDADE 2 - Avaliando resultado por RMSE (Raiz do Erro Quadrático Médio)
+
+Cenário:Criando dados simulados de um Chatbot: Custo Real vs Custo Previsto pelo modelo
+
+- Execute o algoritmo machine learning da atividade 4: python execicio_04_rmse.py
+
+- Colete o resultado gerado e adicione na SPRINT-2 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+Atividade 4 cumprida com SUCESSO!
+
+
+
+
+
+
+ATIVIDADE 3 - Estatística descritiva com Python
+
+Objetivo: relembrar os conceitos de Estatística Descritiva
+
+- Execute o gerador de dados desta atividade: python Gerador_dados_estatisticos.py
+
+- Execute o algoritmo de estatística: python Exercicio_05_estatitica.py
+
+- Explique o resultado de cada um dos resultados do algoritmo, além de explicar o que é: a média, a moda, a mediana e o desvio padrão
+
+- Colete o resultado gerado e adicione na SPRINT-2 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+Atividade 5 cumprida com SUCESSO!
+
+
+ATIVIDADE 4 -
+
+
+
+
+ATIVIDADE 5 -
+
+
+
+ATIVIDADE 6 -
+
+
+
+ATIVIDADE 7 -
+
+
+
+ATIVIDADE 8 - 
