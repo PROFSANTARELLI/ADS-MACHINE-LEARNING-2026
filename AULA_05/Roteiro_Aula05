@@ -5,36 +5,50 @@ CALENDÁRIO DE MARÇO:
 - 26/03/2026: PROVA INDIVIDUAL (AAI) - VALOR 0,5 ponto
 
 
-
 2ª ETAPA da SPRINT-02 (AC-2) - Valor da atividade de hoje: 0,25 pts
 
 PREPARAÇÃO:
-- Baixe todos os arquivos da pasta AULA_04 do repositório GITHUB do professor:
-
-link: https://github.com/PROFSANTARELLI/ADS-MACHINE-LEARNING-2026
-
-- Suba todos os arquivos da aula 05 para o repositório oficial do Grupo.
-- Realize as atividades abaixo:
-
-ATENÇÃO: Para as atividades 1 e 2 usar o gerador: Gerador_Métricas_ML.py
-
-python Gerador_Métricas_ML.py
+- Baixe todos os arquivos da pasta AULA_05 do repositório GITHUB do professor - link: https://github.com/PROFSANTARELLI/ADS-MACHINE-LEARNING-2026
+- Suba todos os arquivos da aula 05 para o repositório oficial do Grupo, criando também um diretorio AULA_05 no seu repositótio.
+- Abra a SPRINT-2 no Github Projects e coloque o nome somente dos alunos presentes.
+- Nunca vá embora sem mostrar ao professor os resultados na janela de contexto da SPRINT-2
+- Avalie o cenário e realize as atividades a seguir:
 
 
+Cenário: "Fila de Espera" num E-commerce
 
-ATIVIDADE 1 - Avaliando resultado por MAE (Erro Médio Absoluto)
-Cenário:Criando dados simulados de um Chatbot: Custo Real vs Custo Previsto pelo modelo
+Certa empresa de comércio eletrônico, uma das maiores plataformas de e-commerce do país, utiliza um chatbot inteligente para resolver 80% das dúvidas dos clientes.
+No entanto, quando o assunto é complexo (como estornos ou problemas de entrega), o bot precisa transferir o cliente para um atendente humano.
+O grande problema? A frustração do cliente não vem apenas da espera, mas da incerteza.
+Pesquisas realizadas mostraram que clientes que recebem uma estimativa de tempo errada têm 3x mais chances de cancelar a compra e reclamar em redes sociais.
 
-- Execute o algoritmo machine learning da atividade 3: python exercicio_03_mae.py
+Foi desenvovlido um modelo de Machine Learning para prever o Tempo de Espera Real (em segundos). O sistema exibe uma mensagem: "Um atendente estará com você em aproximadamente X segundos".
+A missão de hoje não é apenas olhar para a "média de acertos", mas identificar falhas críticas. O sistema às vezes "trava" devido a picos de tráfego, gerando esperas muito longas que o modelo atual não consegue prever com precisão.
 
-- Expplique o que ocorreu neste resultado
+Recebemos um dataset (suporte_ecommerce.csv) com 1.000 registros de atendimentos recentes, contendo:
+- Mensagens: Quantas trocas de mensagens o cliente já teve com o bot.
+- Complexidade: Uma nota de 1 a 5 sobre a dificuldade do problema.
+- Atendentes: Quantos humanos estão logados e disponíveis no momento.
+- Tempo Real: O tempo exato que o cliente esperou (o que aconteceu de verdade).
+- Tempo Predito: O tempo que o nosso modelo de IA calculou (a promessa feita ao cliente).
+- Satisfação (CSAT): A nota de 1 a 10 dada pelo cliente após o atendimento.
 
-- Colete o resultado gerado e adicione na SPRINT-2 (pode ser Copia e Cola ou print do resultado na linha de comando)
+Nesta missão você não será apenas um desenvolvedor de Machine Learning, mas um auditor de IA. Através dos exercícios, você deverá responder:
+1 - O nosso modelo é "mentiroso"? (Análise de MAE).
+2 - O nosso modelo é perigoso em situações de crise? (Análise de RMSE).
+3 - Como o humor do nosso cliente (Satisfação) é afetado por esses números? (Análise de Estatística Descritiva).
 
-Atividade 3 cumprida com SUCESSO!
+Para as atividades 1, 2 e 3 você deverá executar os dois geradores de dados sintéticos a seguir para seu DATASET:
+
+Gerador_Métricas_ML.py
+Gerador_Dados_Fila.py
 
 
+ATIVIDADE 1 - Métricas MAE e RMSE do DATASET suporte_ecommerce.CSV
 
+- Execute o algoritmo machine learning da atividade 1: python execicio_01_suporte_ecommerce.py
+- Colete o resultado gerado e adicione na SPRINT-2
+- Explique com detalhes os resultados coletados (e o que significa) e coloque abaixo do resultado colocado no SPRINT-2 (permitido pedir ajuda da IA)
 
 
 
@@ -42,47 +56,44 @@ ATIVIDADE 2 - Avaliando resultado por RMSE (Raiz do Erro Quadrático Médio)
 
 Cenário:Criando dados simulados de um Chatbot: Custo Real vs Custo Previsto pelo modelo
 
-- Execute o algoritmo machine learning da atividade 4: python execicio_04_rmse.py
+- Execute o algoritmo machine learning da atividade 2: python execicio_02_rmse.py
+- Colete o resultado gerado e adicione na SPRINT-2
 
-- Colete o resultado gerado e adicione na SPRINT-2 (pode ser Copia e Cola ou print do resultado na linha de comando)
-
-Atividade 4 cumprida com SUCESSO!
-
+Atividade 2 cumprida com SUCESSO!
 
 
 
 
+ATIVIDADE 3 - Avaliando resultado por MAE (Erro Médio Absoluto)
+Cenário:Criando dados simulados de um Chatbot: Custo Real vs Custo Previsto pelo modelo
 
-ATIVIDADE 3 - Estatística descritiva com Python
+- Execute o algoritmo machine learning da atividade 3: python exercicio_03_mae.py
+- Colete o resultado gerado e adicione na SPRINT-2
 
+Atividade 3 cumprida com SUCESSO!
+
+
+
+
+ATIVIDADE 4 - Estatística descritiva do cenário apresentado
 Objetivo: relembrar os conceitos de Estatística Descritiva
 
-- Execute o gerador de dados desta atividade: python Gerador_dados_estatisticos.py
+- Use os dados criados do gerador de dados desta atividade: suporte_ecommerce.CSV (se necessário, rode de novo o gerador: Gerador_Dados_Fila.py)
+- Execute o algoritmo: Exercicio_04_estatitica.py
+- Explique o resultado dos resultados do algoritmo.
+- Colete o resultado gerado e adicione na SPRINT-2
 
-- Execute o algoritmo de estatística: python Exercicio_05_estatitica.py
 
-- Explique o resultado de cada um dos resultados do algoritmo, além de explicar o que é: a média, a moda, a mediana e o desvio padrão
 
-- Colete o resultado gerado e adicione na SPRINT-2 (pode ser Copia e Cola ou print do resultado na linha de comando)
+
+ATIVIDADE 5 - Estatística descritiva
+Objetivo: relembrar os conceitos de Estatística Descritiva
+
+- Execute o gerador de dados desta atividade: Gerador_dados_estatisticos.py
+- Execute o algoritmo de estatística: Exercicio_05_estatitica.py
+- Explique os resultados do algoritmo, além de explicar o que é: a média, a moda, a mediana e o desvio padrão
+- Colete o resultado gerado e adicione na SPRINT-2
 
 Atividade 5 cumprida com SUCESSO!
 
 
-ATIVIDADE 4 -
-
-
-
-
-ATIVIDADE 5 -
-
-
-
-ATIVIDADE 6 -
-
-
-
-ATIVIDADE 7 -
-
-
-
-ATIVIDADE 8 - 
