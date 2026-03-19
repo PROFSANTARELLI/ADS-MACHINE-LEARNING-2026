@@ -145,19 +145,8 @@ Exemplo de interação:
 - Usuário: qual o prazo de entrega?
 - Chatbot (consulta): Vou verificar essa informação para você.
 
-3. Entendimento do Fluxo Completo - Pipeline:
+3. Fazer 3 testes em sequência de inserção de dados e avaliar se os resultados foram satisfatórios.
 
-Texto do usuário
-↓
-Pré-processamento (NLP)
-↓
-Transformação em números
-↓
-Modelo de Machine Learning
-↓
-Classificação da intenção
-↓
-Resposta automática
 
 Atividade 8 cumprida com SUCESSO!
 
