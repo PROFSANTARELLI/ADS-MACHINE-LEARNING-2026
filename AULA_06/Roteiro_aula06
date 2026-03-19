@@ -4,4 +4,162 @@ CALENDÁRIO DE MARÇO:
 - 19/03/2026: SPRINT-02 (AC-2) - ÚLTIMA ETAPA - VALOR 0,5 ponto
 - 26/03/2026: PROVA INDIVIDUAL (AAI) - VALOR 0,5 ponto
 
+ATENÇÃO:
+1 - Verificar material de estudo de prova AAI
+2 - Exercicio 8 tem maior valor entre as atividades (vale 0,2 da nota de hoje)
 
+
+última ETAPA da SPRINT-02 (AC-2) - Valor da atividade de hoje: 0,5 pts
+
+PREPARAÇÃO:
+- Baixe todos os arquivos da pasta AULA_05 do repositório GITHUB do professor:
+
+link: https://github.com/PROFSANTARELLI/CDC-MACHINE-LEARNING-2026
+
+- Suba todos os arquivos da aula 05 para o repositório oficial do Grupo.
+- Realize as atividades abaixo:
+
+
+ATIVIDADE 1 (0,025)- Aprendizado inicial
+Objetivo: Avaliar Texto com PNL
+
+- Execute o código: atv_pnl_01.py
+
+Entregáveis 1:
+- Colete o resultado
+- Coloque toda as respostas na Sprint-2
+
+Atividade 1 cumprida com SUCESSO!
+
+
+
+ATIVIDADE 2 (0,025)- Pipeline PNL
+Objetivo: Trabalhar com PNL
+
+- Execute o código: atv_pnl_02.py
+
+Entregáveis 2:
+- Colete o resultado e explique tudo que aconteceu nas 3 etapas do código PNL
+- Coloque toda as respostas na Sprint-2.
+
+Atividade 2 cumprida com SUCESSO!
+
+
+
+ATIVIDADE 3 (0,05)- Limpeza de Texto
+Objetivo: Trabalhar com PNL
+
+- Execute o código: atv_pnl_03.py
+
+Entregáveis 3:
+- Colete o resultado e explique tudo que aconteceu no código PNL
+- Coloque toda as respostas na Sprint-2.
+
+Atividade 3 cumprida com SUCESSO!
+
+
+
+ATIVIDADE 4 (0,05)- Vetorização de Texto
+Objetivo: Trabalhar com PNL
+
+- Execute o código: atv_pnl_04.py
+
+Entregáveis 4:
+- Colete o resultado e explique tudo que aconteceu no código PNL
+- Coloque toda as respostas na Sprint-2.
+
+Atividade 3 cumprida com SUCESSO!
+
+
+
+ATIVIDADE 5 (0,05)- Contador de Palavras
+Objetivo: Trabalhar com PNL
+
+- Execute o código: atv_pnl_05.py
+
+Entregáveis 5:
+- Complete o código para construir o contador de palavras
+- Colete o resultado e explique tudo que aconteceu no código PNL
+- Coloque toda as respostas na Sprint-2.
+
+Atividade 5 cumprida com SUCESSO!
+
+
+
+
+ATIVIDADE 6 (0,05)- Frequência de Palavras
+Objetivo: Trabalhar com PNL
+
+- Execute o código: atv_pnl_06.py
+
+Entregáveis 6:
+- Complete o código para construir Frequência de Palavras
+- Colete o resultado e explique tudo que aconteceu no código PNL
+- Coloque toda as respostas na Sprint-2.
+
+Atividade 6 cumprida com SUCESSO!
+
+
+
+ATIVIDADE 7 (0,05)- Classificador Simples de Intenção
+Objetivo: Trabalhar com PNL
+
+- Execute o código: atv_pnl_07.py
+
+Entregáveis 7:
+- Complete o código para construir o Classificador Simples de Intenção
+- Colete o resultado e explique tudo que aconteceu no código PNL
+- Coloque toda as respostas na Sprint-2.
+
+Atividade 7 cumprida com SUCESSO!
+
+
+ATIVIDADE 8 (0,2)- Objetivo: automatizar atendimento ao cliente usando Inteligência Artificial.(obrigatório ser feito pelo grupo todo em conjunto)
+Cenário: Neste exercício, você assume o papel de desenvolvedor de um chatbot para um e-commerce, cujo objetivo é interpretar automaticamente mensagens dos clientes, como pedidos de cancelamento, reclamações ou consultas.
+Como os usuários escrevem de formas variadas, o sistema precisa utilizar técnicas de Processamento de Linguagem Natural (NLP) para limpar, organizar e padronizar o texto antes de analisá-lo.
+
+Ao executar o código, você irá compreender todo o fluxo de uma aplicação de Machine Learning aplicada, passando pelo pré-processamento do texto, transformação em dados numéricos (vetorização), treinamento
+de um modelo com Naive Bayes e avaliação de desempenho por meio da acurácia. Além disso, será possível interagir com o sistema, simulando um chatbot que identifica automaticamente a intenção do usuário e responde de forma coerente.
+
+Como resultado esperado, você deverá observar o modelo classificando corretamente a maioria das mensagens e entender claramente o pipeline completo: entrada do usuário → tratamento do texto → modelagem → previsão → resposta. 
+Esse exercício representa, de forma simplificada, um cenário real de mercado, onde a inteligência artificial é aplicada para automatizar atendimentos e melhorar a experiência do cliente.
+
+- Execute o código: atv_pnl_08.py
+- Entregável: coloco o resultado na SPRINT 2 e descreva os resultados conforme abaixo:
+
+Resultados Esperados para esta atividade:
+- Após rodar o código, você deve observar:
+
+1. Acurácia do Modelo
+- Exemplo: Acurácia do modelo: 0.80
+- Interpretação: O modelo acerta cerca de 80% das intenções. Quanto mais dados, melhor o resultado
+
+2. Funcionamento do Chatbot
+Exemplo de interação:
+- Usuário: quero cancelar meu pedido
+- Chatbot (cancelamento): Posso te ajudar a cancelar seu pedido.
+
+- Usuário: meu produto veio quebrado
+- Chatbot (reclamacao): Sinto muito pelo problema. Vamos resolver isso.
+
+- Usuário: qual o prazo de entrega?
+- Chatbot (consulta): Vou verificar essa informação para você.
+
+3. Entendimento do Fluxo Completo - Pipeline:
+
+Texto do usuário
+↓
+Pré-processamento (NLP)
+↓
+Transformação em números
+↓
+Modelo de Machine Learning
+↓
+Classificação da intenção
+↓
+Resposta automática
+
+Atividade 8 cumprida com SUCESSO!
+
+
+BOA ATIVIDADE A TODOS!
