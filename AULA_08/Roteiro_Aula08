@@ -1,0 +1,36 @@
+CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot com responsabilidade social (foco na área de Saúde) + PROJETO TECH - parte de Machine Learning
+
+    - AULA 02/04 - Detalhamento e escopo do projeto (sem valor de nota) - Brainstorming de detalhes - CONCLUÍDO!
+
+    - AULA 09/04 - Construção da especificação técnica, arquitetura e documentação do projeto - Valor: 0,2 pt
+    - AULA 16/04 - Dataset e análise exploratória dos dados - Valor: 0,2 pt
+    - AULA 23/04 - tratamento e modelo inicial + avaliação e ajustes - Valor: 0,3 pt
+    - AULA 30/04 - interface e entrega final com modelo rodando - Valor: 0,3 pt
+
+ROTEIRO DA AULA 08 - 09/04:
+
+PARTE 1 - PROJETO TECH 2026
+O GRUPO DEVE:
+1 - Ler documento de sugestões, caso ainda não tenha um projeto definido e conversar para passar as informações necessárias ao professor.
+
+2 - Criar um repositório novo no GITHUB do grupo onde serão guardados os documentos e códigos de Machine Learning (e os demais também que quiserem)
+
+3 - Preencher o formulário de informações de Machine Learning (obrigatório para organização da nota projeto tech na disciplina de Machine Learning)
+LINK: https://forms.gle/LKNmPYDz7vXFmdDQA
+
+4 - Usar essa e as próximas aulas para desenvolverem o projeto Tech após as missões da aula cumpridas
+
+
+PARTE 2 - Projeto AC-3 de ML/Chatbot
+O GRUPO DEVE:
+1 - Ler e compreender o documento de escopo técnico e de negócio do projeto "ML na Biomedicina"
+
+2 - Construir e entregar um documento técnico detalhado que tenha:
+ - Arquitetura básica do sistema (crie uma IA com perfil de engenheiro de software para ajudar)
+ - UML de caso de uso com a função principal do sistema (que é a interação do sistema de médicos e enfermeiros)
+ - Especificação funcional detalhada das principais funcionalidades do sistema (sistema precisa ter pelo menos 5 funcionalidades básicas + uma funcionalidade interna de Machine Learning)
+ - Modelo de dados conforme orientado no documento de escopo técnico
+
+3 - Encaminhar documento, em DOCX ou Google Docs, para avaliação e aprovação do professor pelo email: flavio.santarelli@pro.fecaf.com.br e aguardar EM SALA a análise e devolução do professor.
+
+4 - Após aprovação do professor, inserir no repositório, na parte de projetos - Sprint 3
