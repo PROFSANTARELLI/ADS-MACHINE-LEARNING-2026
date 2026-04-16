@@ -12,7 +12,7 @@ ROTEIRO DA AULA 09 - 16/04:
 SPRINT-3 (AC-3) -  Dataset e análise exploratória dos dados - Valor: 0,2 pt
 
 ATIVIDADE 1
-- Realize a atividade de construção de API para ML Python, executando pelo Google Colab e colocando os resultados na SPRINT-3 (O objetivo é o primeiro contato entre ML e API)
+- Realize a atividade de construção de API para ML Python, executando pelo Google Colab e colocando os resultados na SPRINT-3
 - Abra o arquivo ml_api.txt, lendo e executando seu passo a passo.
 - Coloque apenas os resultados na janela da SPRINT-3
 
