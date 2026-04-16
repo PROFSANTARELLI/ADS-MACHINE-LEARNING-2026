@@ -1,0 +1,30 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Configuração visual dos gráficos
+sns.set_theme(style="whitegrid")
+plt.rcParams['figure.figsize'] = [10, 6]
+
+# 1. CARREGAMENTO
+df = pd.read_csv('logs_chatbot_eda.csv')
+
+print("--- Resumo Inicial dos Dados ---")
+print(df.info())
+print("-" * 30)
+
+# ---------------------------------------------------------
+# EXERCÍCIO 1: LIMPEZA E PERFILAMENTO
+# ---------------------------------------------------------
+# Identificar nulos
+nulos = df['satisfacao'].isnull().sum()
+print(f"Valores nulos em Satisfação: {nulos} ({nulos/len(df)*100:.2f}%)")
+
+# Preencher nulos com a mediana por grupo
+df['satisfacao'] = df.groupby('categoria_cliente')['satisfacao'].transform(lambda x: x.fillna(x.median()))
+
+# Remover outliers de tamanho de mensagem (Z-Score manual simples)
+limite_superior = df['tamanho_msg'].mean() + 3 * df['tamanho_msg'].std()
+df_limpo = df[df['tamanho_msg'] <= limite_superior].copy()
+print(f"Linhas removidas (Outliers de Spam): {len(df) - len(df_limpo)}")
