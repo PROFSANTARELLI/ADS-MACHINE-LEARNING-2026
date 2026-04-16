@@ -25,10 +25,11 @@ ATIVIDADE 2 (3 exercícios de EDA)
 - Leia o arquivo Roteiro_atv02_aula09 e execute cada um dos 3 exercícios em sequência
 - Coloque apenas os resultados na janela da SPRINT-3
 
+ATENÇÃO: A atividade 1 e 2 não tem qualquer relação com a atividade 3, portanto, faça em janelas/notebooks diferentes no Google Colab
 
 ATIVIDADE 3 - CRIAR DATASET E TESTAR DADOS PARA O PROJETO DIAGNÓSTICOS PARA BIOMEDICINA:
  1 - Baixe em PDF o documento de especificação técnica criado na aula anteior
- 2 - Abra a IA CLAUDE.IA, acesse com sua conta Google e siga as instruções a seguir
+ 2 - Abra a IA CLAUDE.AI, acesse com sua conta Google e siga as instruções a seguir
  3 - Coloque uma skill para ele como assistente especialista em Machine Learning (sigas as intruções do arquivo: skill_claude.txt)
  4 - Coloque o prompt no chat da Skill criada (siga as instruções do arquivo: prompt_biomedicina.txt)
  5 - Insira o arquivo PDF que foi baixado
