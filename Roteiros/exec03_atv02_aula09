@@ -1,0 +1,39 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Configuração visual dos gráficos
+sns.set_theme(style="whitegrid")
+plt.rcParams['figure.figsize'] = [10, 6]
+
+# 1. CARREGAMENTO
+df = pd.read_csv('logs_chatbot_eda.csv')
+
+print("--- Resumo Inicial dos Dados ---")
+print(df.info())
+print("-" * 30)
+
+# ---------------------------------------------------------
+# EXERCÍCIO 3: CORRELAÇÕES E DISTRIBUIÇÕES
+# ---------------------------------------------------------
+# Histograma do Tempo de Resposta
+plt.figure()
+sns.histplot(df_limpo['tempo_resposta_seg'], kde=True, color='skyblue')
+plt.title('Distribuição do Tempo de Resposta (Segundos)')
+plt.xlabel('Segundos')
+plt.show()
+
+# Boxplot: Satisfação vs Intenção
+plt.figure()
+sns.boxplot(data=df_limpo, x='intencao', y='satisfacao', palette='Set3')
+plt.title('Variabilidade da Satisfação por Tipo de Intenção')
+plt.xticks(rotation=45)
+plt.show()
+
+# Matriz de Correlação (Apenas colunas numéricas)
+plt.figure()
+corr = df_limpo[['tamanho_msg', 'tempo_resposta_seg', 'satisfacao']].corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title('Mapa de Calor de Correlação')
+plt.show()
