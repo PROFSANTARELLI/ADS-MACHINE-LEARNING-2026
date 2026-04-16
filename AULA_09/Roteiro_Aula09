@@ -9,23 +9,7 @@ CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot com responsabilidade soc
 
 ROTEIRO DA AULA 09 - 16/04:
 
-PARTE 1 - PROJETO TECH
-ATENÇÃO: A aula de hoje tem construção de valor de 0,25 pontos para o projeto TECH na parte de Machine Learning e Chatbot
- - Certifique-se que o grupo preencheu o formulário do professor sobre as informações do seu projeto Tech, que foi disponibilizado na aula 08
- - Baseado no que foi definido pelo grupo sobre ML, faça a documentação técnica necessária que detalhe:
-    - TÍTULO DO PROJETO
-    - DESCRIÇÃO DO QUE ESTÁ SENDO CONSTRUÍDO
-    - ESPECIFICAÇÃO TÉCNICA DETALHADA SOBRE O ITEM DE MACHINE LEARNING OU CHATBOT QUE SERÁ DESENVOLVIDO NO APP OU GAME QUE SERÁ CONSTRUÍDO, COM:
-      - Linguagem - versão (preferencialmente Python)
-      - Bibliotecas:
-      - APIs:
-      - Outros detalhes técnicos adicionais (se houver):
-  - Salve o documento num arquivo DOC ou Google Docs
-  - Envie por email (flavio.santarelli@pro.fecaf.com.br) o documento criado e aguarde o retorno dele por email com a nota alcançada neste primeiro entregável do projeto TECH
-  ATENÇÃO: a resposta será enviada durante a semana e não na aula.
-
-
-PARTE 2 - SPRINT-3 (AC-3) -  Dataset e análise exploratória dos dados - Valor: 0,2 pt
+SPRINT-3 (AC-3) -  Dataset e análise exploratória dos dados - Valor: 0,2 pt
 
 ATIVIDADE 1
 - Realize a atividade de construção de API para ML Python, executando pelo Google Colab e colocando os resultados na SPRINT-3 (O objetivo é o primeiro contato entre ML e API)
