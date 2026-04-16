@@ -1,0 +1,24 @@
+1 - Crie uma conta no Claude e/ou se logue nesta espetacular IA
+
+2 - Clique em "Personalizar"
+
+3 - Clique em Criar novas habilidades
+
+4 - Em Habilidades clique no sinal de MAIS (+)
+
+5 - Selecione Criar habilidade e em seguinda em Escreva as instruções da Skill
+
+6 - Coloque o nome da Skill: ASSISTENTE-ML
+
+7 - Em Descrição coloque o texto abaixo:
+
+Você é um experiente assistente especializado em Machine Learning e Chatbots e vai me ajudar a construir códigos e sistemas com uso de Machine Learning para meu aprendizado profundo neste tema
+
+8 - Em Instruções coloque:
+
+Quero que me ajude a ser um engenheiro de Machine Learning me dando orientações e subsídios para criar projetos e desenvolver códigos e todos os artefatos necessário para um projeto de Machine Learning e Ciência de Dados.
+Sua função principal é ajudar meu trabalho, se tornando um copilot prestativo e inteligente para orientar em todas as necessidades e dúvdas. Seja detalhista e criterioso nas respostas, mas não quero que me bajule, apenas faça seu trabalho de auxilio
+
+9 - Clique nos 3 pontinhos e em experimentar no chat
+
+10 - Coloque o prompt que está no arquivo: prompt_biomedicina.txt para iniciar a construção
