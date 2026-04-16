@@ -1,0 +1,139 @@
+Persistência e APIs
+- Ambiente de Execução: Google Colab
+- Objetivo: Aprender a salvar modelos treinados e integrá-los em aplicações reais via API.
+
+
+Introdução
+No mundo real (e no teu Projeto Tech), precisamos que o modelo seja persistente e acessível por outros sistemas (Web, Mobile ou Games).
+
+Nesta aula vocês irão:
+- Serializar o teu modelo (salvar em disco).
+- Disponibilizar o modelo através de uma API usando FastAPI.
+- Integrar a IA com aplicações externas.
+
+Tarefa 1: Persistência de Modelos (Joblib)
+
+Treinar um modelo pode levar minutos, horas ou dias. A persistência permite que guardes o estado final do treino num ficheiro .pkl.
+
+1.1 Preparação do Modelo
+Copia e executa o código abaixo no Colab para treinar um classificador simples.
+
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+import joblib
+
+# Dados de exemplo: intenções de um Chatbot
+data = {
+    'texto': ["cancelar pedido", "estorno", "ajuda login", "senha errada"],
+    'classe': ["financeiro", "financeiro", "suporte", "suporte"]
+}
+df = pd.DataFrame(data)
+
+# Criando um Pipeline que une Vetorização + Modelo
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer()),
+    ('clf', LogisticRegression())
+])
+
+# Treinando
+pipeline.fit(df['texto'], df['classe'])
+
+# SALVANDO O MODELO NO DISCO
+joblib.dump(pipeline, 'modelo_chatbot.pkl')
+print(" Modelo salvo com sucesso como 'modelo_chatbot.pkl'!")
+
+O que aconteceu aqui?
+- O comando joblib.dump pegou em todo o objeto do Pipeline (que contém o dicionário de palavras e os pesos matemáticos do modelo) e transformou-o num ficheiro binário.
+
+
+Tarefa 2: Criando uma API com FastAPI
+Para que um sistema Front-end ou um jogo fale com a tua IA, eles precisam de uma API. Vamos usar o FastAPI, framework rápido para Python.
+
+2.1 Instalando as dependências no Colab
+Como o Colab não é um servidor web padrão, precisamos de algumas ferramentas extras para expor a nossa API.
+
+!pip install fastapi uvicorn pyngrok nest_asyncio
+
+
+2.2 Estrutura do Servidor
+
+Configuração do Authtoken (Obrigatório)
+1 - O ngrok exige agora uma conta para funcionar.
+2 - Crie uma conta gratuita em ngrok.com. (use pela conta do github mesmo)
+3 - No painel, procura por Your Authtoken.
+4 - Copia o token e substitui no código abaixo.
+
+2.3 Estrutura do Servidor
+Execute o bloco abaixo para configurar o servidor que irá "servir" o teu modelo.
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+import joblib
+import nest_asyncio
+from pyngrok import ngrok
+import uvicorn
+import threading # Import threading
+
+# CONFIGURAÇÃO DO NGROK (Substitui pelo teu token real)
+# Sem isto, o ngrok dará erro de autenticação!
+NGROK_TOKEN = "COLOQUE AQUI O SEU TOKEN"
+ngrok.set_auth_token(NGROK_TOKEN)
+
+app = FastAPI()
+
+# Definimos o formato do JSON que a API vai receber
+class Mensagem(BaseModel):
+    texto: str
+
+# Carregue o modelo
+model = joblib.load('modelo_chatbot.pkl')
+
+@app.post("/predict")
+async def predict(item: Mensagem):
+    # O modelo faz a predição baseada no texto recebido
+    predicao = model.predict([item.texto])[0]
+    probabilidade = model.predict_proba([item.texto]).max()
+
+    return {
+        "intencao": predicao,
+        "confianca": float(probabilidade),
+        "status": "sucesso"
+    }
+
+# Configuração para rodar o servidor dentro do Colab
+nest_asyncio.apply()
+
+# Criamos o túnel público
+try:
+    public_url = ngrok.connect(8000).public_url
+    print(f" TUA API ESTÁ ONLINE EM: {public_url}")
+    print("Para testar, adiciona '/docs' ao final da URL acima.")
+except Exception as e:
+    print(f" Erro ao conectar o ngrok: {e}")
+
+# FIX: Run Uvicorn in a separate thread to avoid event loop conflicts in Colab
+config = uvicorn.Config(app, host="0.0.0.0", port=8000, loop="asyncio")
+server = uvicorn.Server(config)
+
+def run_server():
+    server.run()
+
+thread = threading.Thread(target=run_server)
+thread.start()
+
+print("Uvicorn server started in a background thread.")
+print("The Colab cell has finished executing. The server should be accessible via ngrok.")
+
+
+
+Tarefa 3: Teste de Integração
+
+Agora que a tua API rodando, abra uma nova aba no teu browser e acede à URL gerada pelo ngrok terminando em /docs.
+- Clica em POST /predict.
+- Clica em Try it out.
+- Altera o JSON para: {"texto": "não consigo entrar"}.
+- Clica em Execute e veja a resposta da tua IA
+
+Por fim, print o resultado e coloque na janela da Sprint3
