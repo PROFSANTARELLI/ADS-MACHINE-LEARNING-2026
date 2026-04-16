@@ -1,0 +1,27 @@
+Você tem os dados de logs brutos do chatbot (logs_chatbot_eda.csv), sua missão é atuar como um Analista de Dados.
+Você deve extrair insights antes de começarmos a treinar um modelo de Machine Learning.
+
+Exercício 1: Limpeza e Perfilamento
+- A primeira regra da EDA é: "Não confie nos seus dados".
+- Identificação de Nulos: Quantos clientes deixaram de avaliar o atendimento? Qual a porcentagem de dados faltantes na coluna satisfacao?
+- Tratamento de Dados: Preencha os valores nulos da satisfação com a Mediana da categoria do cliente.
+- Filtragem de Outliers: Identifique as 10 mensagens com tamanho fora do comum (Spam) e remova-as do seu DataFrame principal para não viciar a média.
+
+Execute no Colab, com os dados já gerados, o scrpit do arquivo: exec01_atv02_aula09
+
+
+Exercício 2: O Comportamento por Categoria
+- Precisamos entender se o nosso SLA (Acordo de Nível de Serviço) está sendo cumprido.
+- Agrupamento: Calcule a média de tempo_resposta_seg e a média de satisfacao agrupada por categoria_cliente.
+- Análise de Canal: Qual canal (WhatsApp, Web, etc) possui o maior volume de mensagens?
+- Visualização: Crie um Gráfico de Barras comparando a satisfação média entre clientes Premium, Standard e Free.
+
+Execute no Colab, com os dados já gerados, o scrpit do arquivo: exec02_atv02_aula09
+
+
+Exercício 3: Correlações e Hipóteses
+- Matriz de Correlação: Existe correlação entre o tamanho_msg e o tempo_resposta_seg?
+- Distribuição: Crie um Histograma do tempo de resposta. Ele segue uma distribuição Normal ou está "esticado" para a direita (Skewed)?
+- Visualização Avançada: Gere um Boxplot da satisfação em relação à intenção do contato. Qual intenção (Financeiro, Reclamação, etc) gera as notas mais baixas e mais voláteis?
+
+Execute no Colab, com os dados já gerados, o scrpit do arquivo: exec03_atv02_aula09
