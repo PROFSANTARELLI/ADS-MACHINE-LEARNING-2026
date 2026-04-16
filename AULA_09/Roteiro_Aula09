@@ -25,24 +25,35 @@ ATENÇÃO: A aula de hoje tem construção de valor de 0,25 pontos para o projet
   ATENÇÃO: a resposta será enviada durante a semana e não na aula.
 
 
-PARTE 2 - PROJETO SPRINT-3 (AC-3) -  Dataset e análise exploratória dos dados - Valor: 0,2 pt
+PARTE 2 - SPRINT-3 (AC-3) -  Dataset e análise exploratória dos dados - Valor: 0,2 pt
 
 ATIVIDADE 1
 - Realize a atividade de construção de API para ML Python, executando pelo Google Colab e colocando os resultados na SPRINT-3 (O objetivo é o primeiro contato entre ML e API)
 - Abra o arquivo ml_api.txt, lendo e executando seu passo a passo.
-- Coloque o resultado na janela da SPRINT-3
+- Coloque apenas os resultados na janela da SPRINT-3
 
 ATENÇÃO: A atividade 1 não tem qualquer relação com a atividade 2, portanto, faça em janelas/notebooks diferentes no Google Colab
 
-ATIVIDADE 2
-- CRIAR DATASET E O ALGORITMO ML PARA O PROJETO DIAGNÓSTICOS PARA BIOMEDICINA:
+
+ATIVIDADE 2 (3 exercícios de EDA)
+- Realize a atividade num novo Notebook do Google Colab
+- Execute o script do arquivo: Gerador_dados_Aula09.py
+- Leia o arquivo Roteiro_atv02_aula09 e execute cada um dos 3 exercícios em sequência
+- Coloque apenas os resultados na janela da SPRINT-3
+
+
+ATIVIDADE 3 - CRIAR DATASET E TESTAR DADOS PARA O PROJETO DIAGNÓSTICOS PARA BIOMEDICINA:
  1 - Baixe em PDF o documento de especificação técnica criado na aula anteior
  2 - Abra a IA CLAUDE.IA, acesse com sua conta Google e siga as instruções a seguir
  3 - Coloque uma skill para ele como assistente especialista em Machine Learning (sigas as intruções do arquivo: skill_claude.txt)
  4 - Coloque o prompt no chat da Skill criada (siga as instruções do arquivo: prompt_biomedicina.txt)
  5 - Insira o arquivo PDF que foi baixado
- 6 - Coloque o código de dados sintético criado para rodar no Google Colab
- 7 - Rode em seguinda o algoritmo que irá treinar o modelo segundo o documento de especificação técnica e usando o arquivo CSV gerado
- 8 - Coloque o arquivo CSV gerado no GITHUB do grupo
- 9 - Coloque os códigos no repositório oficial do grupos e apenas os resultados na SPRINT-3
+ 6 - Agora, no Google Colab, execute o script de geração de dados sintético criado.
+ 7 - Agora é necessário testar e analisar o Dataset criado para o seu projeto Diagnósticos para Biomedicina.
+ 8 - Você deve desenvolver os algoritmos que executem as seguintes validações e explorações no dataset:
+    1 - Desenvolver uma rotina para identificar valores nulos ou "zero" em colunas onde isso é impossível (como Glicose, Pressão Arterial e IMC) e 
+    implementar a correção desses dados através da substituição pela mediana, garantindo a consistência estatística para o restante do projeto.
+    2 - Criar um algoritmo simples que liste os 10 pacientes com os maiores níveis de Glicose e os 10 com os maiores níveis de Colesterol.
+ 9 - Coloque os códigos, o dataset e documentos da aula de hoje no repositório oficial do grupo numa pasta chamada AULA_09.
+ 10  - Coloque apenas os resultados na janela da SPRINT-3
 10 - Avise o professor que terminou e chame para validar tudo que foi pedido e os alunos que estão presentes nesta atividade em sala.
