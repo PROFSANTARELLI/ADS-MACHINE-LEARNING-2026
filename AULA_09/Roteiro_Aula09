@@ -8,3 +8,41 @@ CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot com responsabilidade soc
     - AULA 30/04 - interface e entrega final com modelo rodando - Valor: 0,3 pt
 
 ROTEIRO DA AULA 09 - 16/04:
+
+PARTE 1 - PROJETO TECH
+ATENÇÃO: A aula de hoje tem construção de valor de 0,25 pontos para o projeto TECH na parte de Machine Learning e Chatbot
+ - Certifique-se que o grupo preencheu o formulário do professor sobre as informações do seu projeto Tech, que foi disponibilizado na aula 08
+ - Baseado no que foi definido pelo grupo sobre ML, faça a documentação técnica necessária que detalhe:
+    - TÍTULO DO PROJETO
+    - DESCRIÇÃO DO QUE ESTÁ SENDO CONSTRUÍDO
+    - ESPECIFICAÇÃO TÉCNICA DETALHADA SOBRE O ITEM DE MACHINE LEARNING OU CHATBOT QUE SERÁ DESENVOLVIDO NO APP OU GAME QUE SERÁ CONSTRUÍDO, COM:
+      - Linguagem - versão (preferencialmente Python)
+      - Bibliotecas:
+      - APIs:
+      - Outros detalhes técnicos adicionais (se houver):
+  - Salve o documento num arquivo DOC ou Google Docs
+  - Envie por email (flavio.santarelli@pro.fecaf.com.br) o documento criado e aguarde o retorno dele por email com a nota alcançada neste primeiro entregável do projeto TECH
+  ATENÇÃO: a resposta será enviada durante a semana e não na aula.
+
+
+PARTE 2 - PROJETO SPRINT-3 (AC-3) -  Dataset e análise exploratória dos dados - Valor: 0,2 pt
+
+ATIVIDADE 1
+- Realize a atividade de construção de API para ML Python, executando pelo Google Colab e colocando os resultados na SPRINT-3 (O objetivo é o primeiro contato entre ML e API)
+- Abra o arquivo ml_api.txt, lendo e executando seu passo a passo.
+- Coloque o resultado na janela da SPRINT-3
+
+ATENÇÃO: A atividade 1 não tem qualquer relação com a atividade 2, portanto, faça em janelas/notebooks diferentes no Google Colab
+
+ATIVIDADE 2
+- CRIAR DATASET E O ALGORITMO ML PARA O PROJETO DIAGNÓSTICOS PARA BIOMEDICINA:
+ 1 - Baixe em PDF o documento de especificação técnica criado na aula anteior
+ 2 - Abra a IA CLAUDE.IA, acesse com sua conta Google e siga as instruções a seguir
+ 3 - Coloque uma skill para ele como assistente especialista em Machine Learning (sigas as intruções do arquivo: skill_claude.txt)
+ 4 - Coloque o prompt no chat da Skill criada (siga as instruções do arquivo: prompt_biomedicina.txt)
+ 5 - Insira o arquivo PDF que foi baixado
+ 6 - Coloque o código de dados sintético criado para rodar no Google Colab
+ 7 - Rode em seguinda o algoritmo que irá treinar o modelo segundo o documento de especificação técnica e usando o arquivo CSV gerado
+ 8 - Coloque o arquivo CSV gerado no GITHUB do grupo
+ 9 - Coloque os códigos no repositório oficial do grupos e apenas os resultados na SPRINT-3
+10 - Avise o professor que terminou e chame para validar tudo que foi pedido e os alunos que estão presentes nesta atividade em sala.
