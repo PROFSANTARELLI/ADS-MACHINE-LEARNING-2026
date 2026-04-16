@@ -1,0 +1,34 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Configuração visual dos gráficos
+sns.set_theme(style="whitegrid")
+plt.rcParams['figure.figsize'] = [10, 6]
+
+# 1. CARREGAMENTO
+df = pd.read_csv('logs_chatbot_eda.csv')
+
+print("--- Resumo Inicial dos Dados ---")
+print(df.info())
+print("-" * 30)
+
+# ---------------------------------------------------------
+# EXERCÍCIO 2: ANÁLISE POR CATEGORIA
+# ---------------------------------------------------------
+analise_cat = df_limpo.groupby('categoria_cliente').agg({
+    'tempo_resposta_seg': 'mean',
+    'satisfacao': 'mean',
+    'ticket_id': 'count'
+}).rename(columns={'ticket_id': 'volume_tickets'})
+
+print("\n--- Performance por Categoria de Cliente ---")
+print(analise_cat)
+
+# Gráfico de Barras: Satisfação Média
+plt.figure()
+sns.barplot(data=df_limpo, x='categoria_cliente', y='satisfacao', palette='viridis')
+plt.title('Satisfação Média por Categoria de Cliente')
+plt.ylabel('Score (1-5)')
+plt.show()
