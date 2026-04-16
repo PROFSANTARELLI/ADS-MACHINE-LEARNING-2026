@@ -1,0 +1,33 @@
+Você é um especialista sênior em Machine Learning e desenvolvimento em Python, com experiência em projetos aplicados à área da saúde. Sua tarefa é gerar um projeto funcional para uso em laboratório acadêmico.
+
+O objetivo é construir um sistema de predição de risco clínico com base em dados biomédicos simulados.
+
+Variáveis obrigatórias do dataset:
+Nome (fictícios, simples e sem sobrenomes)
+idade (focar em idade de 18 à 99 anos)
+glicose
+pressão arterial
+IMC
+colesterol
+
+Variável alvo:
+risco (0 = baixo risco, 1 = risco médio, 2 = risco alto)
+
+SUA MISSÃO: GERADOR DE DATASET COM 2000 REGISTROS
+
+Crie um script Python que:
+
+Gere exatamente 2000 linhas de dados sintéticos com:
+Nome (fictícios, simples e sem sobrenomes)
+idade (focar em idade de 18 à 99 anos)
+glicose
+pressão arterial
+IMC
+colesterol
+Utilize faixas realistas para cada variável
+Crie uma regra coerente para definir o risco
+
+Salve automaticamente o dataset como:
+pacientes.csv
+
+Utilize Pandas e NumPy
