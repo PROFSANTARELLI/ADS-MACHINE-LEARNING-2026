@@ -1,4 +1,4 @@
-CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot com responsabilidade social (foco na área de Saúde) + PROJETO TECH - parte de Machine Learning
+CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot c/ responsabilidade social (foco área de Saúde) + PROJETO TECH - parte de Machine Learning
 
     - AULA 02/04 - Detalhamento e escopo do projeto (sem valor de nota) - Brainstorming de detalhes - CONCLUÍDO!
     - AULA 09/04 - Construção da especificação técnica, arquitetura e documentação do projeto - Valor: 0,2 pt - CONCLUÍDO!
@@ -16,7 +16,8 @@ RECADOS IMPORTANTES PARA A PRÓXIMA AULA (30/04):
 SPRINT-3 (AC-3) - Valor de 0,3 ponto
 
 ATIVIDADE 1 - Fase de construção do algoritmo Machine Learning do projeto
- 1 - Reuse o chat de IA do Claude criado na aula passada com a Skill utilizada (caso não tenha mais, volte na aula 9 e execute a atividade que realiza essa ação)
+ 1 - Reuse o chat de IA do Claude criado na aula passada com a Skill utilizada (caso não tenha mais, volte na aula 9 e execute
+a atividade que realiza essa ação)
  2 - Abra o CLAUDE, acesse com sua conta Google e siga as instruções a seguir
  3 - Coloque o prompt no chat e insira as instruções do arquivo: Prompt_Clade_V2
  4 - Rode o algoritmo que irá treinar o modelo segundo o documento de especificação técnica e usando o arquivo CSV gerado
@@ -25,7 +26,8 @@ ATIVIDADE 1 - Fase de construção do algoritmo Machine Learning do projeto
  7 - Avise o professor que terminou e chame para validar tudo que foi pedido e os alunos que estão presentes nesta atividade em sala.
 
 
-ATIVIDADE 2 - FAZER SOMENTE INDIVIDUALMENTE -  Treinamento preparatório para a prova semestral em junho - Bônus EXTRA de 0,25 na avaliação semestral
+ATIVIDADE 2 - FAZER SOMENTE INDIVIDUALMENTE -  Treinamento preparatório para a prova semestral em junho
+Bônus EXTRA de 0,25 na avaliação semestral
 - Após o grupo completar, você, de forma individual, deve pegar um computador e executar essa tarefa sobre o conhecimento em MLOps.
 - Após o grupo mostrar a entrega completa de hoje, o professor irá liberar o link com o documento para execução da tarefa individual.
 - Ao terminar a atividade, você está liberado para sair.
