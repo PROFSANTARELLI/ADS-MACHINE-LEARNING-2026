@@ -1,0 +1,107 @@
+Você é um especialista sênior em Machine Learning e desenvolvimento em Python, com experiência em projetos aplicados à área da saúde. Sua tarefa é gerar um projeto completo, funcional e didático, pronto para uso em laboratório acadêmico.
+
+O objetivo é construir um sistema de predição de risco clínico com base em dados biomédicos simulados.
+
+Variáveis obrigatórias do dataset:
+Nome (fictícios, simples e sem sobrenomes)
+idade (focar em idade de 18 à 99 anos)
+glicose
+pressão arterial
+IMC
+colesterol
+
+Variável alvo:
+risco (0 = baixo risco, 1 = risco médio, 2 = risco alto)
+
+SUA MISSÃO
+Gerar 3 blocos principais de código:
+
+1. GERADOR DE DATASET (2000 REGISTROS)
+
+Crie um script Python que:
+
+Gere exatamente 2000 linhas de dados sintéticos com:
+Nome (fictícios, simples e sem sobrenomes)
+idade (focar em idade de 18 à 99 anos)
+glicose
+pressão arterial
+IMC
+colesterol
+Utilize faixas realistas para cada variável
+Crie uma regra coerente para definir o risco
+
+Salve automaticamente o dataset como:
+pacientes.csv
+
+Utilize Pandas e NumPy
+
+2. PIPELINE COMPLETO DE MACHINE LEARNING
+Crie um código completo que execute:
+
+Etapas obrigatórias
+Leitura do dataset
+Separação de features (X) e target (y)
+Divisão treino/teste
+Normalização dos dados (StandardScaler)
+Treinamento de múltiplos modelos:
+Regressão Logística
+Random Forest
+KNN
+Avaliação com:
+Acurácia
+Precision
+Recall
+F1-score
+Validação cruzada (k-fold, k=5)
+Comparação dos modelos (qual performa melhor)
+
+3. VISUALIZAÇÃO DE RESULTADOS
+Inclua visualizações utilizando Matplotlib:
+
+Gráfico comparando acurácia dos modelos
+Matriz de confusão (para o melhor modelo)
+(opcional) curva ROC
+
+4. PREDIÇÃO FINAL
+Simular um novo paciente e:
+
+Mostrar probabilidade de risco
+Classificar (baixo/médio/alto)
+Exibir resultado de forma clara
+
+5. REQUISITOS OBRIGATÓRIOS
+O código deve:
+
+Rodar do início ao fim sem erros
+Estar totalmente comentado (linha a linha ou por bloco)
+Ser organizado e didático
+Não depender de dados externos
+Usar apenas bibliotecas padrão:
+pandas
+numpy
+scikit-learn
+matplotlib
+
+6. FORMATO DA RESPOSTA
+Organize a resposta em:
+
+Código do gerador de dataset
+Código completo do pipeline de ML
+Explicação breve do que está acontecendo
+
+7. NÍVEL DE QUALIDADE ESPERADO
+Esse projeto será utilizado em aula prática, portanto:
+
+Evite atalhos
+Evite código incompleto
+Evite explicações genéricas
+
+Priorize:
+
+clareza
+didática
+organização
+código profissional
+IMPORTANTE
+
+O objetivo não é apenas rodar o modelo, mas ensinar o processo completo de Machine Learning.
