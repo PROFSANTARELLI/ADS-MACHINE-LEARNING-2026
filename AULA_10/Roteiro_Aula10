@@ -7,22 +7,25 @@ CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot com responsabilidade soc
     - AULA 23/04 - tratamento e modelo inicial + avaliação e ajustes - Valor: 0,3 pt
     - AULA 30/04 - interface e entrega final com modelo rodando - Valor: 0,3 pt
 
-ROTEIRO DA AULA 10 - 23/04:
-
-PARTE 1 - PROJETO TECH -  FASE DOCUMENTAÇÃO
-ATENÇÃO: A aula de hoje tem construção de valor de 0,25 pontos para o projeto TECH na parte de Machine Learning e Chatbot
- - Certifique-se que o grupo preencheu o formulário do professor sobre as informações do seu projeto Tech
- - Baseado no que foi definido pelo grupo sobre ML, faça a documentação técnica necessária que detalhe:
-    - TÍTULO DO PROJETO
-    - DESCRIÇÃO DO QUE ESTÁ SENDO CONSTRUÍDO (SEJA APP OU GAME)
-    - ESPECIFICAÇÃO TÉCNICA DETALHADA SOBRE O ITEM DE MACHINE LEARNING OU CHATBOT QUE SERÁ DESENVOLVIDO NO APP OU GAME QUE SERÁ CONSTRUÍDO, COM:
-      - Linguagem - versão (preferencialmente Python)
-      - Bibliotecas:
-      - APIs:
-      - Outros detalhes técnicos adicionais (se houver):
-  - Salve o documento num arquivo DOC ou Google Docs
-  - Envie por email (flavio.santarelli@pro.fecaf.com.br) o documento criado e aguarde o retorno dele por email com a nota alcançada neste primeiro entregável do projeto TECH
-  ATENÇÃO: a resposta será enviada durante a semana e não na aula.
+RECADOS IMPORTANTES PARA A PRÓXIMA AULA (30/04):
+- Será solicitado uma documentação sobre o projeto TECH que valerá 0,25 pts oficial no projeto (aguardar instruções)
+- Faremos a última etapa da AC-3
+- Será aplicado uma prova simulada do ENADE após a atividade final
 
 
-PARTE 2 - SPRINT-3 (AC-3) - Valor de 0,3 ponto
+SPRINT-3 (AC-3) - Valor de 0,3 ponto
+
+ATIVIDADE 1 - Fase de construção do algoritmo Machine Learning do projeto
+ 1 - Reuse o chat de IA do Claude criado na aula passada com a Skill utilizada (caso não tenha mais, volte na aula 9 e execute a atividade que realiza essa ação)
+ 2 - Abra o CLAUDE, acesse com sua conta Google e siga as instruções a seguir
+ 3 - Coloque o prompt no chat e insira as instruções do arquivo: Prompt_Clade_V2
+ 4 - Rode o algoritmo que irá treinar o modelo segundo o documento de especificação técnica e usando o arquivo CSV gerado
+ 5 - Faça 3 testes seguidos inserindo novos dados em tela
+ 6 - Coloque os códigos no repositório oficial do grupos e apenas os resultados na SPRINT-3
+ 7 - Avise o professor que terminou e chame para validar tudo que foi pedido e os alunos que estão presentes nesta atividade em sala.
+
+
+ATIVIDADE 2 - FAZER SOMENTE INDIVIDUALMENTE -  Treinamento preparatório para a prova semestral em junho - Bônus EXTRA de 0,25 na avaliação semestral
+- Após o grupo completar, você, de forma individual, deve pegar um computador e executar essa tarefa sobre o conhecimento em MLOps.
+- Após o grupo mostrar a entrega completa de hoje, o professor irá liberar o link com o documento para execução da tarefa individual.
+- Ao terminar a atividade, você está liberado para sair.
