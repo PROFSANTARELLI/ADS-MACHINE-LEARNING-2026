@@ -11,7 +11,7 @@ ROTEIRO DA AULA: PROJETO DESENVOLVIMENTO DE SISTEMA DE BIOMEDICINA PARA DIAGNÓT
 
 PARTE 1 - DESENVOLVIMENTO DO FRONT-END, BANCO E INTEGRAR O ALGORITMO ML
 Nesta etapa você deverá:
-- Ler o documento técnico presente na pasta desta aula com o nome: Roteiro do Projeto Clínica Biomedicina.pdf
+- Ler o documento técnico presente na pasta desta aula com o nome: Roteiro_final_ml.pdf
 - Criar o banco de dados (em python) seguindo as especicações deste documento
 - Crair o front-end do sistema (preferencialmente em Python) seguindo as especificações deste documento
 - Demonstrar para o professor o sistema rodando, cadastrando informação nova e mostrando resultado feito pelo algorítmo ML, conforme roteiro do projeto.
