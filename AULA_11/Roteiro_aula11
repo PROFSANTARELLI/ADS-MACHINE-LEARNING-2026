@@ -1,4 +1,4 @@
-CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot c/ responsabilidade social (foco área de Saúde) + PROJETO TECH - parte de Machine Learning
+CALENDÁRIO DE ABRIL - FOCO: Projeto AC-3 de ML/Chatbot c/ responsabilidade social (foco área de Saúde)
 
     - AULA 02/04 - Detalhamento e escopo do projeto (sem valor de nota) - Brainstorming de detalhes - CONCLUÍDO!
     - AULA 09/04 - Construção da especificação técnica, arquitetura e documentação do projeto - Valor: 0,2 pt - CONCLUÍDO!
@@ -13,7 +13,7 @@ PARTE 1 - DESENVOLVIMENTO DO FRONT-END, BANCO E INTEGRAR O ALGORITMO ML
 Nesta etapa você deverá:
 - Ler o documento técnico presente na pasta desta aula com o nome: Roteiro do Projeto Clínica Biomedicina.pdf
 - Criar o banco de dados (em python) seguindo as especicações deste documento
-- Crair o fron-end do sistema (preferencialmente em Python) seguindo as especificações deste documento
+- Crair o front-end do sistema (preferencialmente em Python) seguindo as especificações deste documento
 - Demonstrar para o professor o sistema rodando, cadastrando informação nova e mostrando resultado feito pelo algorítmo ML, conforme roteiro do projeto.
 
 Para FINALIZAR, o grupo deverá criar e enviar o pitch com o vídeo de até 3 minutos demonstrando a aplicação funcionando totalmente até o dia 10/05 via AVA.
