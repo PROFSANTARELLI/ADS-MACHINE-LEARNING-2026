@@ -1,0 +1,265 @@
+Exercício 1: Classificador de Intenções Baseado em TF-IDF
+ORIENTAÇÃO: Crie um loop de chat (while True) onde o bot classifica a intenção da mensagem digitada pelo usuário usando IA clássica. Para sair, o usuário deve digitar 'sair'.
+OBJETIVO: Substituir estruturas de if/else por um pipeline de Processamento de Linguagem Natural (TF-IDF + Naive Bayes) que infere o objetivo do usuário em tempo real.
+TESTE: Digite 3 mensagens e colete as respostas
+
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+df = pd.read_csv('logs_ecommerce.csv')
+
+def rotular_basico(msg):
+    if 'Oi' in msg or 'Olá' in msg: return 'saudacao'
+    if 'pedido' in msg or 'rastreio' in msg or 'endereço' in msg: return 'suporte'
+    return 'reclamacao'
+
+df['intencao'] = df['mensagem_usuario'].apply(rotular_basico)
+
+vectorizer = TfidfVectorizer()
+X = vectorizer.fit_transform(df['mensagem_usuario'])
+y = df['intencao']
+
+modelo = MultinomialNB()
+modelo.fit(X, y)
+
+print("Bot Classificador pronto! Digite sua mensagem (ou 'sair'):")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': 
+        break
+    
+    # TODO: Transforme a entrada com o vectorizer e faça a predição do modelo
+    X_teste = vectorizer.transform([entrada])
+    intencao = modelo.predict(X_teste)[0]
+    print(f"Bot: Identifiquei que sua intenção é [{intencao}]. Como posso ajudar com isso?\n")
+
+
+Exercício 2: Gerenciamento de Contexto e Memória de Curto Prazo
+ORIENTAÇÃO: Construa um fluxo de chat via prompt que pergunte primeiro o nome do usuário e use essa informação nas respostas seguintes, identificando também intenções de compra.
+OBJETIVO: Compreender como arquitetar o gerenciamento de estados (Session State) para que o bot não sofra de "amnésia" a cada nova linha de comando do terminal.
+TESTE: Digite 3 mensagens e colete as respostas
+
+class ChatbotComMemoria:
+    def __init__(self):
+        self.contexto = {"nome": None, "ultimo_assunto": None}
+        
+    def responder(self, mensagem):
+        # TODO: Se o nome não estiver registrado, salve a mensagem atual como o nome do usuário.
+        if not self.contexto["nome"]:
+            self.contexto["nome"] = mensagem
+            return f"Prazer, {mensagem}! Em que posso te ajudar hoje?"
+        
+        if "comprar" in mensagem.lower() or "preço" in mensagem.lower():
+            self.contexto["ultimo_assunto"] = "vendas"
+            return f"Olha, {self.contexto['nome']}, nosso setor de {self.contexto['ultimo_assunto']} está com promoções hoje!"
+            
+        return f"Entendi sua mensagem sobre '{mensagem}', {self.contexto['nome']}."
+
+bot = ChatbotComMemoria()
+print("Bot: Olá! Qual é o seu nome?")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    resposta = bot.responder(entrada)
+    print(f"Bot: {resposta}\n")
+
+
+Exercício 3: Extração de Entidades via Regex no Fluxo de Atendimento
+ORIENTAÇÃO: Implemente um bot de triagem que aguarda o usuário digitar uma mensagem contendo um número de protocolo ou pedido iniciado por '#' seguido de 4 números.
+OBJETIVO: Usar Expressões Regulares (re) integradas ao input do terminal para capturar e isolar dados estruturados inseridos em textos livres.
+TESTE: Digite 3 mensagens e colete as respostas
+
+import re
+print("Bot de Triagem: Olá! Por favor, informe o problema e o número do seu pedido (Ex: #1234).")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    
+    # TODO: Use re.findall para capturar o padrão de código do pedido na mensagem do usuário
+    pedido_encontrado = re.findall(r'#\d{4}', entrada)
+    
+    if pedido_encontrado:
+        print(f"Bot: Sucesso! Encontrei o pedido {pedido_encontrado[0]} na sua mensagem. Buscando no sistema...\n")
+    else:
+        print("Bot: Não consegui identificar o número do seu pedido. Lembre-se de usar o formato #1234.\n")
+
+
+Exercício 4: Análise de Sentimento com Gatilho para Transbordo Humano
+ORIENTAÇÃO: Desenvolva um chat contínuo que avalia a carga emocional das palavras digitadas pelo usuário e encerra o bot se detectar hostilidade.
+OBJETIVO: Criar regras de segurança baseadas em pontuação léxica de sentimentos para transferir o atendimento para um humano caso o cliente demonstre irritação severa.
+TESTE: Digite 3 mensagens e colete as respostas
+
+def calcular_irritacao(mensagem):
+    palavras_negativas = ['péssimo', 'quebrado', 'atrasou', 'horroroso', 'ruim', 'ódio', 'droga']
+    return sum(1 for palavra in palavras_negativas if palavra in mensagem.lower())
+
+print("Bot de Suporte: Como posso ajudar você hoje?")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    
+    # TODO: Avalie a entrada usando a função calcular_irritacao. Se for maior ou igual a 2, dispare o gatilho.
+    if calcular_irritacao(entrada) >= 2:
+        print("Bot: Detectei insatisfação severa. Protocolo de transbordo ativado. Transferindo para supervisor humano...")
+        break
+    else:
+        print("Bot: Certo, entendi. Processando sua solicitação normalmente...\n")
+
+
+Exercício 5: Máquina de Estados Finita (FSM) Guiada por Menu Interativo
+ORIENTAÇÃO: Projete um bot estruturado em árvore de decisões onde o input do usuário dita as transições de estados válidos do sistema (Menu -> Suporte -> Pagamento).
+OBJETIVO: Dominar o conceito de FSM (Finite State Machine) para garantir que o usuário navegue em fluxos lógicos protegidos contra inputs inválidos.
+TESTE: Digite 3 mensagens e colete as respostas
+
+class BotFSM:
+    def __init__(self):
+        self.estado_atual = "MENU_PRINCIPAL"
+        
+    def transicionar(self, opcao):
+        # TODO: Implemente as condições que mudam self.estado_atual de acordo com a opção fornecida
+        if self.estado_atual == "MENU_PRINCIPAL":
+            if opcao == "1":
+                self.estado_atual = "SUPORTE"
+                return "Modo [SUPORTE] ativo. Digite '0' para retornar ao menu."
+            elif opcao == "2":
+                self.estado_atual = "FINANCEIRO"
+                return "Modo [FINANCEIRO] ativo. Digite '0' para retornar ao menu."
+            return "Opção inválida. Escolha 1 para Suporte ou 2 para Financeiro."
+            
+        if self.estado_atual in ["SUPORTE", "FINANCEIRO"] and opcao == "0":
+            self.estado_atual = "MENU_PRINCIPAL"
+            return "Retornando ao [MENU_PRINCIPAL]. Opções: 1-Suporte, 2-Financeiro."
+            
+        return f"Ainda processando requisições dentro do módulo {self.estado_atual}."
+
+bot = BotFSM()
+print("Bot FSM: Bem-vindo! Digite 1 para Suporte ou 2 para Financeiro.")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    resposta = bot.transicionar(entrada)
+    print(f"Bot: {resposta}\n")
+
+
+
+Exercício 6: FAQ Inteligente Usando Similaridade de Cosseno via Terminal
+ORIENTAÇÃO: Permita que o usuário faça perguntas livres no prompt e compare a string digitada com uma base estática de dúvidas frequentes (FAQ).
+OBJETIVO: Aplicar álgebra linear e vetorização de palavras para mapear a proximidade geométrica da dúvida e retornar a resposta correta mesmo se as palavras exatas mudarem.
+TESTE: Digite 3 mensagens e colete as respostas
+
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import CountVectorizer
+
+faq_base = [
+    "Como posso rastrear meu pedido", 
+    "Quais as formas de pagamento aceitas", 
+    "Como funciona a política de troca"
+]
+
+print("Bot FAQ: Digite sua dúvida sobre nossa operação:")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    
+    todas_frases = faq_base + [entrada]
+    vectorizer = CountVectorizer().fit_transform(todas_frases)
+    vetores = vectorizer.toarray()
+    
+    # TODO: Use cosine_similarity entre o vetor da entrada (vetores[-1:]) e os do FAQ (vetores[:-1])
+    similitudes = cosine_similarity(vetores[-1:], vetores[:-1])
+    melhor_indice = similitudes.argmax()
+    
+    if similitudes[0][melhor_indice] > 0.4:
+        print(f"Bot: Encontrei uma resposta relevante no FAQ: '{faq_base[melhor_indice]}'\n")
+    else:
+        print("Bot: Desculpe, não localizei uma resposta exata no FAQ. Pode tentar reformular?\n")
+
+
+
+Exercício 7: RAG Primitivo (Retrieval-Augmented Generation) com Consulta a Arquivo CSV
+ORIENTAÇÃO: Crie um bot que pede o ID de usuário no terminal, busca as informações financeiras desse ID no arquivo logs_ecommerce.csv e usa esses dados na resposta.
+OBJETIVO: Entender a base de um sistema RAG: consultar fontes de dados frias para injetar contexto na resposta oferecida ao usuário final.
+TESTE: Digite 3 mensagens e colete as respostas
+
+import pandas as pd
+print("Bot CRM: Por favor, informe seu ID de usuário de 4 dígitos para consulta:")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    
+    if not entrada.isdigit():
+        print("Bot: Por favor, insira apenas números.\n")
+        continue
+        
+    df = pd.read_csv('logs_ecommerce.csv')
+    # TODO: Busque no DataFrame se o 'id_usuario' coincide com o valor inteiro convertido da entrada
+    registro = df[df['id_usuario'] == int(entrada)]
+    
+    if not registro.empty:
+        gasto = registro.iloc[0]['historico_compras_valor']
+        score = registro.iloc[0]['score_satisfacao']
+        print(f"Bot: Dados recuperados! Sua última compra foi de R${gasto} e seu nível de satisfação histórico é {score}/5.\n")
+    else:
+        print("Bot: Não localizei esse ID na nossa base de logs. Tente outro.\n")
+
+
+
+Exercício 8: Bot Orquestrador de Chamadas de Funções do Sistema (Router)
+ORIENTAÇÃO: Crie um bot que lê a mensagem digitada pelo usuário e escolhe automaticamente se deve acionar uma função interna do sistema ou responder como texto padrão.
+OBJETIVO: Implementar a lógica primária de Roteamento de Intenções para "Tool Use" (uso de ferramentas externas por bots).
+TESTE: Digite 3 mensagens e colete as respostas
+
+def acionar_modulo_financeiro():
+    return "[API BANCO] Conectando ao gateway de pagamento... Nenhum estorno pendente."
+
+print("Bot Orquestrador: Como posso te ajudar? (Tente falar sobre 'dinheiro' ou 'estorno')")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    
+    # TODO: Verifique se palavras-chave específicas estão contidas na entrada para chamar a função dedicada
+    if "dinheiro" in entrada.lower() or "estorno" in entrada.lower():
+        retorno_api = acionar_modulo_financeiro()
+        print(f"Bot: Detectei demanda financeira. Acionando ferramenta -> {retorno_api}\n")
+    else:
+        print("Bot: Entendido. Tratando requisição no canal de atendimento comum.\n")
+
+
+
+Exercício 9: Integração com a API do Google Gemini (System Instructions via Prompt)
+ORIENTAÇÃO: Crie um loop de conversação real integrado à API do Gemini. Configure o modelo para agir sob uma persona de especialista e use input() para enviar os prompts.
+OBJETIVO: Aprender a instanciar o cliente oficial do Google GenAI, tratar variáveis de ambiente para a API Key e customizar comportamentos via system_instruction.
+TESTE: coloque o resultado de saída
+
+import os
+from google import genai
+from google.genai import types
+
+# Alunos devem configurar suas chaves do Google AI Studio no ambiente
+# os.environ["GEMINI_API_KEY"] = "SUA_API_KEY_AQUI"
+
+print("Gemini Bot Persona: Iniciando conexão com o ecossistema Google AI. Faça sua pergunta técnica:")
+while True:
+    entrada = input("Você: ")
+    if entrada.lower() == 'sair': break
+    
+    try:
+        client = genai.Client()
+        # TODO: Defina as configurações do modelo estabelecendo a System Instruction desejada
+        config_ia = types.GenerateContentConfig(
+            system_instruction="Você é o mestre dos magos de um RPG de TI. Fale de forma mística e curta.",
+            temperature=0.7
+        )
+        
+        resposta = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=entrada,
+            config=config_ia
+        )
+        print(f"Bot: {resposta.text}\n")
+        
+    except Exception as e:
+        print(f"Bot: Erro de conexão ou API Key ausente. Verifique as configurações. Descrição: {e}\n")
+
+

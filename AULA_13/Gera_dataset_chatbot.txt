@@ -1,0 +1,27 @@
+import pandas as pd
+import numpy as np
+
+def gerar_base_dados():
+    np.random.seed(42)
+    categorias = ['Eletrônicos', 'Moda', 'Casa', 'Livros']
+    
+    dados = {
+        'id_usuario': np.random.randint(1000, 9999, 100),
+        'mensagem_usuario': np.random.choice([
+            'Olá, bom dia!', 'Quero saber onde está meu pedido', 
+            'Vocês são péssimos, meu produto veio quebrado', 
+            'Como faço para cancelar minha assinatura?',
+            'Onde vejo o código de rastreio?', 'Oi! Alguém online?',
+            'Quero meu dinheiro de volta, atrasou demais',
+            'Preciso mudar o endereço de entrega urgente'
+        ], 100),
+        'categoria_produto': np.random.choice(categorias, 100),
+        'historico_compras_valor': np.random.uniform(20.0, 1500.0, 100).round(2),
+        'score_satisfacao': np.random.randint(1, 6, 100)
+    }
+    
+    df = pd.DataFrame(dados)
+    df.to_csv('logs_ecommerce.csv', index=False)
+    print("Arquivo 'logs_ecommerce.csv' gerado para os exercícios!")
+
+gerar_base_dados()
