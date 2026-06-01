@@ -112,7 +112,6 @@ A evolução das interfaces conversacionais substitui as matrizes de contagem es
 
 O código Python abaixo integra de forma lógica e sequencial as etapas de desenvolvimento abordadas ao longo do semestre. Ele realiza a preparação do texto, vetorização estatística por TF-IDF, otimização de parâmetros com validação cruzada, análise de importância de atributos para explicabilidade, logging simulado de telemetria e o controle conversacional com filtros de segurança.
 
-
 import pandas as pd
 import numpy as np
 import re
@@ -239,7 +238,7 @@ print("\n")
 
 
 # ==============================================================================
-# ETAPA 5: MOTOR DE INFERÊNCIA, TELEMETRIA E REGRAS DE SEGURANÇA (REGEX)
+# ETAPA 5: MOTOR DE INFERÊNCIA, TELEMETRIA E REGRAS DE SEGURANÇA (MULOPS/REGEX)
 # ==============================================================================
 def processar_chat_conversacional(mensagem_usuario):
     """
